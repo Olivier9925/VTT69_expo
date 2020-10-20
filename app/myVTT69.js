@@ -1,12 +1,12 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-const MyAbeilles = () => {
+const MyVTT69 = () => {
     return (
         <>
-            <Text>MyAbeilles coucou</Text>
+            <Text>MyVTT69 coucou</Text>
         </>
     );
 }
 
-export default MyAbeilles;
+export default MyVTT69;

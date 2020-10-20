@@ -1,14 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { SafeAreaView, Text, View } from 'react-native';
-import MyAbeilles from './app/MyAbeilles';
+import MyVTT69 from './app/MyVTT69';
 
 const App = () => {
   return (
     <>
       <SafeAreaView>
         <StatusBar style="auto" />
-        <MyAbeilles />
+        <MyVTT69 />
       </SafeAreaView>
     </>
   );
