@@ -9,7 +9,9 @@ export default createSlice({
 	initialState: initState,
 	reducers: {
 		loginSaisie: {
-			reducer: (state, action) => { },
+			reducer: (state, action) => {
+				state.connexion = true
+			},
 			prepare: (user, password) => { return { payload: { user, password } }; }
 		},
 		logout: {

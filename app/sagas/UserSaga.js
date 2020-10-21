@@ -1,17 +1,16 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
 import { createSagaRoot } from '@sagas';
-import {
-	WSgetToken,
-} from '@services/UsersServices';
+import { WSgetToken } from '@services/UsersServices';
 import UserReducer from '@reducers/UserReducer';
 
 // //////////////////
 // SAGA FUNCTIONS
 // //////////////////
 export function* loginSaga() {
+	console.log('loginSaga')
 	try {
         const response_token = yield call(WSgetToken);
-        global.console.log('🔻', response_token, '🔺')
+        console.log('🔻', response_token, '🔺')
 		} catch (error) {
 			console.log('erreur de connexion : ', error)
 		}
@@ -22,7 +21,7 @@ export function* loginSaga() {
 // WATCH FUNCTIONS
 // //////////////////
 function* watchlogin() {
-	// yield takeEvery(UserReducer.actions.loginSaisie, loginSaga)
+	yield takeEvery(UserReducer.actions.loginSaisie, loginSaga)
 }
 
 export default createSagaRoot(watchlogin);
